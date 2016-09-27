@@ -11,15 +11,15 @@ This is a wrapper of the Machine Learning lib Caffe running its classifier demo 
 
 Just start the docker container and map the port 5000 to a public port:
 
-    docker run -it -p 5000:5000 irony/caffe-docker-classifier
+    docker run -it -p 5000:5000 afritzler/caffe-docker-classifier
 
 Open the docker ip in a web browser
 
-    open http://192.168.99.100:5000
+    open http://172.17.0.1:5000
 
 or use the api:
 
-    curl http://192.168.99.100:5000/classify_url?imageurl=http://lorempixel.com/400/200/animals/2/
+    curl http://172.17.0.1:5000/classify_url?imageurl=http://lorempixel.com/400/200/animals/2/
 
     or POST to /classify_upload
 
